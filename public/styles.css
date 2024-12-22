@@ -1,0 +1,13 @@
+/* Estilos para el modo claro */
+@media (prefers-color-scheme: light) {
+  .favicon {
+    fill: #272727;
+  }
+}
+
+/* Estilos para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .favicon {
+    fill: #ffffff;
+  }
+}
