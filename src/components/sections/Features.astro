@@ -1,0 +1,111 @@
+---
+import { Image } from "astro:assets";
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+
+import myImage from "../../assets/images/dev-with-c-1.webp";
+import GradiantText from "../shared/GradiantText.astro";
+
+type FeatureProps = {
+  title: string;
+  description: string;
+};
+const features = 
+[
+  {
+    title: "Análisis Avanzado",
+    description:
+      "Obtén información valiosa a través de análisis detallados, ayudándote a tomar decisiones basadas en datos para optimizar tus campañas.",
+  },
+  {
+    title: "Campañas Publicitarias Dirigidas",
+    description:
+      "Llega a tu audiencia ideal con anuncios altamente segmentados diseñados para maximizar la interacción y las conversiones.",
+  },
+  {
+    title: "Gestión de Calendario de Contenidos",
+    description:
+      "Organiza tu estrategia de contenido con calendarios que garantizan publicaciones consistentes y oportunas.",
+  },
+  {
+    title: "Colaboraciones con Influencers",
+    description:
+      "Asóciate con voces influyentes de tu industria para ampliar el alcance y la credibilidad de tu marca.",
+  },
+  {
+    title: "Informes Personalizados",
+    description:
+      "Recibe informes adaptados que desglosan métricas de rendimiento y brindan claridad sobre tus esfuerzos de marketing.",
+  },
+  {
+    title: "Pruebas A/B",
+    description:
+      "Optimiza tus campañas con pruebas A/B para identificar qué estrategias conectan mejor con tu audiencia.",
+  },
+  {
+    title: "Escucha Social",
+    description:
+      "Supervisa conversaciones y tendencias en línea para mantenerte a la vanguardia y adaptar tus estrategias de manera efectiva.",
+  },
+  {
+    title: "Análisis de Tendencias",
+    description:
+      "Aprovecha el análisis de tendencias para anticiparte a los cambios en tu industria y mantener una ventaja competitiva.",
+  },
+  {
+    title: "Soporte al Cliente 24/7",
+    description:
+      "Disfruta de soporte continuo para garantizar que tus campañas y herramientas funcionen sin interrupciones.",
+  },
+  {
+    title: "Integración Multiplataforma",
+    description:
+      "Integra herramientas y plataformas de manera fluida para un flujo de trabajo de marketing unificado y eficiente.",
+  },
+  {
+    title: "Personalización Dinámica de Contenidos",
+    description:
+      "Entrega contenido altamente personalizado a tu audiencia, mejorando la interacción y fomentando la lealtad.",
+  },
+  {
+    title: "Análisis y Comparativa de Competencia",
+    description:
+      "Analiza a tus competidores para identificar oportunidades y compara tu desempeño con los líderes del sector.",
+  },
+
+];
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section id="features" class=`${className}`>
+  <Container className="">
+    <div class="text-center max-w-3xl mx-auto">
+      <Title>
+        Servicios  <GradiantText>gratuitos <br />incluidos</GradiantText> contratando nuestros servicios
+      </Title>
+    </div>
+    <div class="flex flex-row flex-wrap mt-8">
+      <!-- <div class="flex flex-col lg:gap-10 lg:gap-12 midmd:flex-row mt-8"> -->
+      <!-- <div class="flex  lg:w-1/2 flex-row"> -->
+      {
+        features.map((feature: FeatureProps) => {
+          return (
+            <div class="flex items-center text-heading-3 font-medium basis-full md:basis-1/2 lg:basis-1/3">
+              <span class="font-bold rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">
+                &checkmark;
+              </span>
+              {feature.title}
+            </div>
+          );
+        })
+      }
+      <!-- </div> -->
+    </div>
+  </Container>
+</section>
