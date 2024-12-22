@@ -1,0 +1,14 @@
+body {
+  background-color: #f0f8ff; /* Azul claro */
+  color: #808080; /* Gris */
+}
+
+a {
+  color: #6db6ff; /* Azul claro */
+}
+
+header, footer {
+  background-color: #d3d3d3; /* Gris claro */
+}
+
+/* ...otros estilos según sea necesario... */
