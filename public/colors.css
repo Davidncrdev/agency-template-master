@@ -1,14 +1,29 @@
 body {
-  background-color: #f0f8ff; /* Azul claro */
-  color: #808080; /* Gris */
+  background-color: #f0f8ff; /* Azul claro para modo claro */
+  color: #808080; /* Gris para modo claro */
 }
 
 a {
-  color: #6db6ff; /* Azul claro */
+  color: #1e90ff; /* Azul claro para modo claro */
 }
 
 header, footer {
-  background-color: #d3d3d3; /* Gris claro */
+  background-color: #d3d3d3; /* Gris claro para modo claro */
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; /* Gris oscuro para modo oscuro */
+    color: #e0e0e0; /* Gris claro para modo oscuro */
+  }
+
+  a {
+    color: #bb86fc; /* Azul claro para modo oscuro */
+  }
+
+  header, footer {
+    background-color: #333333; /* Gris oscuro para modo oscuro */
+  }
 }
 
 /* ...otros estilos según sea necesario... */
